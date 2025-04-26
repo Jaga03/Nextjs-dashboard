@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import {FaBars} from 'react-icons/fa'
+import dynamic from 'next/dynamic'
+const FaBars = dynamic(() => import('react-icons/fa').then(mod => mod.FaBars), { ssr: false });
 
 
 export default function Sidebar(){
